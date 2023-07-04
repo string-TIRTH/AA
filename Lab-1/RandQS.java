@@ -1,6 +1,4 @@
 import java.util.*;
-
-
 class RandQS{
     public static void main(String args[]){
         QuickSort obj = new QuickSort();
