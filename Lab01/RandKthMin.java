@@ -28,8 +28,6 @@ public class RandKthMin {
                      91, 34,54, 64, 19, 82, 87, 65};
         obj.findKth(arr,345);
 
-        Sir mrudang  = new Sir();
-        mrudang.end();
         System.out.println(arr.length);
     }
 
