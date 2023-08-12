@@ -1,21 +1,23 @@
 import java.util.*;
 class Rand_Primality_Test{
     public static void main(String[] args) {
-        int test_count = 1;
-        // int f_liars = 0;
-        // long n =1000000000;
+        // int test_count = 1;
+        // // int f_liars = 0;
+        // // long n =1000000000;
         Rand_Primality_Test_Helper obj = new Rand_Primality_Test_Helper();
-        for(int i = 1 ;i<test_count+1;i++){
-            // //  System.out.println(i+"th iteration = "+obj.isPrime(2614150 , 1));
-            // if(obj.isPrime( , 100) == true){
-            //     System.out.println("Error at "+i+"th iteration");
-            if(obj.isPrime(4, 100)){
-                System.out.println("given number is Prime");
-            }else{
-                System.out.println("given number is composite");
-            }
-            // System.out.println(obj.isPrime(1000000008 , 1));
-        }
+        System.out.println(obj.mod_exp(29, 96, 97));
+
+        // for(int i = 1 ;i<test_count+1;i++){
+        //     // //  System.out.println(i+"th iteration = "+obj.isPrime(2614150 , 1));
+        //     // if(obj.isPrime( , 100) == true){
+        //     //     System.out.println("Error at "+i+"th iteration");
+        //     if(obj.isPrime(4, 100)){
+        //         System.out.println("given number is Prime");
+        //     }else{
+        //         System.out.println("given number is composite");
+        //     }
+        //     // System.out.println(obj.isPrime(1000000008 , 1));
+        // }
         
         // long exp = n/6000000;
         // System.out.println("expected waiting time : "+exp+" Seconds");
@@ -31,6 +33,7 @@ class Rand_Primality_Test{
         // System.out.println(f_liars);
         // System.out.println(n-3);
         // System.out.println("Probablity : "+((float )(f_liars)/(n-3)));
+        
     }
 }
 class Rand_Primality_Test_Helper{
@@ -42,7 +45,9 @@ class Rand_Primality_Test_Helper{
                 res = (res*a)%y;
             }
             x=x/2;
-            
+            System.out.print("a = "+a);
+            System.out.print(" x = "+x);
+            System.out.println(" res = "+res);
         }
         return res;
     }
