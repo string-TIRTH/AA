@@ -1,11 +1,11 @@
 class HorsepollStringMatching {
     public static void main(String[] args) {
-        String str = "JIM_SAW_ME_IN_A_BARBER_SHOP_BARBER";
-        String ptn = "BARBER";
+        String str = "JIM_SAW_ME_IN_A_BARBER_SHOP_BARBERBARBERBARBER";
+        String ptn = "UMBRELLA";
         HorsepollStringMatchingHelper obj = new HorsepollStringMatchingHelper();
         obj.matcher(str, ptn);
-        // System.out.println("");
-        // obj.printArr(obj.shift); 
+        System.out.println("");
+        obj.printArr(obj.shift); 
         
         // System.out.println(str.length());      
         // System.out.println(obj.shift[17]);
@@ -50,8 +50,7 @@ class HorsepollStringMatchingHelper{
                     // System.out.println(s+" - "+i);
                     if(j==0){
                         System.out.println("match found  :"+(s-ptn.length()));
-                        s++;
-                        break;
+                        s = s+(shift[str.charAt(s) - 'A']);
                     }
                     
                 }   
@@ -60,9 +59,14 @@ class HorsepollStringMatchingHelper{
         }
     }
     void printArr(int arr[]){
-        for (int i = 0; i < arr.length; i++) {
-            if(arr[i]!=6)
-            System.out.println(i +" "+arr[i]);
+        for (int i = 97; i < 123; i++) {
+            // if(arr[i]!=6)
+            System.out.print(" "+(char)i);
+        }
+        System.out.println("");
+        for (int i = 97; i < 123; i++) {
+            // if(arr[i]!=6)
+            System.out.print(" "+arr[i-97]);
         }
     }
 }
