@@ -45,7 +45,7 @@ class SegmentIntersectionHelper{
         }
     }
     double direciton(Point p1,Point p2,Point p3){
-        return (p3.x - p1.x)*(p2.x - p1.x);
+        return ((p3.x - p1.x)*(p2.y - p1.y) - (p3.y - p1.y)*(p2.x - p1.x));
     }
     boolean onSegment(Point p1,Point p2,Point p3){
         if(Math.min(p1.x,p2.x) <= p3.x && p3.x <= Math.max(p1.x,p2.x) && Math.min(p1.y,p2.y) <= p3.y && p3.y <= Math.max(p1.y,p2.y)){
